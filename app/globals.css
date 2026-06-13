@@ -4,12 +4,22 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+@font-face {
+  font-family: 'jacques';
+  src: url('/fonts/JacquesFrancois-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'roboto';
+  src: url('/fonts/RobotoSerif_36pt-Bold.ttf');
+}
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-jacques: 'jacques', sans-serif;
+  --font-roboto: 'roboto', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +33,14 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar:hover {
+  color: #e4e4e4;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+html {
+  scroll-behavior: smooth;
 }

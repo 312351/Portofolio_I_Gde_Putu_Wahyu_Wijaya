@@ -65,7 +65,7 @@ const Page = () => {
         </div>
       )}
 
-      <Header setNavShow={setNavShow} />
+      <Header navShow={navShow} setNavShow={setNavShow} />
 
       <div
         className={`

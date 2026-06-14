@@ -3,6 +3,7 @@ import Navbar from "./navbar";
 import { FaBars } from "react-icons/fa";
 
 interface HeaderProps {
+  navShow: boolean;
   setNavShow: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
@@ -20,7 +21,7 @@ const Header = ({ setNavShow }: HeaderProps) => {
         className="lg:hidden"
         size={16}
         color="white"
-        onClick={() => setNavShow?.(true)}
+        onClick={() => setNavShow(true)}
       />
     </div>
   );

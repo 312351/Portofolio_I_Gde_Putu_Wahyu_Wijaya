@@ -16,7 +16,6 @@ const Page = () => {
   ];
   return (
     <div>
-      <Header />
       <div className="w-full h-[700px] flex flex-col items-center justify-center bg-[linear-gradient(180deg,#000000,#ffff)]">
         <div className="w-[300px] w-fit flex flex-col justify-center items-center space-y-[21px]">
           <img

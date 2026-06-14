@@ -67,17 +67,16 @@ const Page = () => {
 
       <Header navShow={navShow} setNavShow={setNavShow} />
 
-      <div
-        className={`
-    fixed z-70 inset-0 top-0 right-0 h-screen w-full pt-25 pr-10
-    bg-linear-to-l from-[#000000] from-70%  to-[#fff0]
-    transition-transform duration-500 flex flex-col items-end justify-start
-    ${navShow ? "translate-x-0" : "translate-x-full"}
-  `}
-        onClick={() => setNavShow(false)}
-      >
-        <Colnavbar/>
-      </div>
+        <div
+          className={`
+            fixed z-70 inset-0 top-0 right-0 h-screen w-[100%] pt-25
+            transition-transform duration-500 flex flex-col items-end justify-start
+            ${navShow ? "translate-x-0" : "translate-x-full"}
+            `}
+          onClick={() => setNavShow(false)}
+        >
+          <Colnavbar />
+        </div>
 
       <div
         id="Sc01"

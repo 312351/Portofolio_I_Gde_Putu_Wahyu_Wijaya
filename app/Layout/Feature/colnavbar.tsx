@@ -6,11 +6,11 @@ const Colnavbar = () => {
     { name: "Other" },
   ];
   return (
-    <div className="w-full hover:bg-gray-800" >
-        <ul className="w-full lg:hidden flex flex-col w-full text-[16px] hover:bg-gray-800text-white gap-x-[50px] font-jacques text-right">
+    <div className="w-[65%] h-full bg-black hover:bg-gray-800" >
+        <ul className="w-full lg:hidden flex flex-col w-full text-[16px] hover:bg-gray-800text-white gap-x-[50px] font-jacques ">
           {data.map((item, index) => (
-            <li key={index} className="w-full navbar cursor-pointer h-20 text-right flex flex-col justify-center items-end">
-              {item.name}
+            <li key={index} className="px-5 w-full navbar cursor-pointer h-25 flex flex-col justify-center start">
+              <a href="" className="w-full h-full flex flex-row items-center justify-start">{item.name}</a>
             </li>
           ))}
         </ul>

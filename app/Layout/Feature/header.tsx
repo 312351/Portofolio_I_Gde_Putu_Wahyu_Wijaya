@@ -3,11 +3,10 @@ import Navbar from "./navbar";
 import { FaBars } from "react-icons/fa";
 
 interface HeaderProps {
-  navShow: boolean;
   setNavShow: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Header = ({ navShow, setNavShow }: HeaderProps) => {
+const Header = ({ setNavShow }: HeaderProps) => {
   return (
     <div className="fixed z-[90] w-full h-25 px-15 bg-black flex flex-row justify-between items-center">
       <div className="w-fit p-3 flex flex-row justify-center items-center space-x-5">
@@ -21,7 +20,7 @@ const Header = ({ navShow, setNavShow }: HeaderProps) => {
         className="lg:hidden"
         size={16}
         color="white"
-        onClick={() => setNavShow(true)}
+        onClick={() => setNavShow?.(true)}
       />
     </div>
   );

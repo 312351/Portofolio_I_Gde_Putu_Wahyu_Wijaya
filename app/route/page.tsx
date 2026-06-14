@@ -1,11 +1,26 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../Layout/Feature/header";
 import Footer from "../Layout/Feature/Footer";
 import { IoMdSchool } from "react-icons/io";
+import Navbar from "../Layout/Feature/navbar";
+import Colnavbar from "../Layout/Feature/colnavbar";
 
 const Page = () => {
   const [show, setShow] = useState(false);
+  const [navShow, setNavShow] = useState(false);
+
+  useEffect(() => {
+    if (navShow) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [navShow]);
 
   const data = [
     {
@@ -41,6 +56,7 @@ const Page = () => {
             >
               ✕
             </button>
+
             <img
               src="/319999918_493531042917763_5048063916269754568_n.jpg"
               alt=""
@@ -50,7 +66,20 @@ const Page = () => {
         </div>
       )}
 
-      <Header />
+      <Header navShow={navShow} setNavShow={setNavShow} />
+
+      <div
+        className={`
+    fixed z-70 inset-0 top-0 right-0 h-screen w-full pt-25 pr-10
+    bg-linear-to-l from-[#000000] from-70%  to-[#fff0]
+    transition-transform duration-500 flex flex-col items-end justify-start
+    ${navShow ? "translate-x-0" : "translate-x-full"}
+  `}
+        onClick={() => setNavShow(false)}
+      >
+        <Colnavbar/>
+      </div>
+
       <div
         id="Sc01"
         className="z-0 text-white w-full h-[900px] lg:h-[700px] flex flex-col items-center justify-center bg-[linear-gradient(180deg,#000000,#ffff)]"

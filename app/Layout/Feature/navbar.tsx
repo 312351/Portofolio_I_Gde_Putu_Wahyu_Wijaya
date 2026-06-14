@@ -32,8 +32,6 @@ const Navbar = () => {
             Other
           </li>
         </ul>
-
-        <FaBars className="lg:hidden" size={16} color="white" />
       </span>
     </div>
   );

@@ -67,16 +67,16 @@ const Page = () => {
 
       <Header navShow={navShow} setNavShow={setNavShow} />
 
-        <div
-          className={`
+      <div
+        className={`
             fixed z-70 inset-0 top-0 right-0 h-screen w-[100%] pt-25
             transition-transform duration-500 flex flex-col items-end justify-start
             ${navShow ? "translate-x-0" : "translate-x-full"}
             `}
-          onClick={() => setNavShow(false)}
-        >
-          <Colnavbar />
-        </div>
+        onClick={() => setNavShow(false)}
+      >
+        <Colnavbar />
+      </div>
 
       <div
         id="Sc01"
@@ -124,12 +124,12 @@ const Page = () => {
         </div>
       </div>
 
-      <div
-        id="Sc02"
-        className="z-0 bg-white p-5 w-full min-h-[470px] font-jacqu text-[30px] flex flex-col space-y-10 justify-center  items-center"
-      >
+      <div className="z-0 bg-white p-5 w-full min-h-[470px] md:h-fit font-jacqu text-[30px] flex flex-col space-y-10 justify-center  items-center">
         <div className="w-full flex flex-col items-center font-bold">
-          <span className="flex flex-col items-center justify-center text-black/60">
+          <span
+            id="Sc02"
+            className="scroll-mt-[20vh] lg:scroll-mt-[40vh] flex flex-col items-center justify-center text-black/60"
+          >
             <IoMdSchool />
             <p>Education</p>
           </span>
@@ -169,7 +169,7 @@ const Page = () => {
 
       <div
         id="Sc03"
-        className="b  z-0 my-5 w-full min-h-[200px] text-white bg-[#4E4E4E] flex flex-col items-center justify-center"
+        className="scroll-mt-[20vh] lg:scroll-mt-[40vh]  z-0 my-5 w-full min-h-[200px] text-white bg-[#4E4E4E] flex flex-col items-center justify-center"
       >
         <div className=" h-full py-8 font-jacques ">
           <div className=" flex flex-col flex flex-col justify-start items-center">
@@ -205,7 +205,7 @@ const Page = () => {
 
       <div
         id="Sc04"
-        className="  z-0 w-full h-[620px] bg-white flex flex-col justify-center items-center"
+        className=" z-0 w-full h-[620px] bg-white flex flex-col justify-center items-center"
       >
         <div className="text-[24px] font-jacques">Other Project</div>
         <div className="w-[261px] h-[250px] justify-center grid grid-cols font-jacques text-white">

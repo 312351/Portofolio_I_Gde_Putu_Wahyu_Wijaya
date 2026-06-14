@@ -1,5 +1,3 @@
-import React from "react";
-
 const Colnavbar = () => {
   const data = [
     { name: "About Me" },

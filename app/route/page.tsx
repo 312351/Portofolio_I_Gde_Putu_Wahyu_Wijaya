@@ -1,9 +1,8 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "../Layout/Feature/header";
 import Footer from "../Layout/Feature/Footer";
 import { IoMdSchool } from "react-icons/io";
-import Navbar from "../Layout/Feature/navbar";
 import Colnavbar from "../Layout/Feature/colnavbar";
 
 const Page = () => {
@@ -66,7 +65,7 @@ const Page = () => {
         </div>
       )}
 
-      <Header navShow={navShow} setNavShow={setNavShow} />
+      <Header setNavShow={setNavShow} />
 
       <div
         className={`
